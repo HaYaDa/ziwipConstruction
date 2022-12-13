@@ -1,0 +1,180 @@
+* {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+body {
+    font-family: century,sans-serif;
+    font-size: 1.5rem;
+    color: #0d4b89; 
+}
+
+#main {
+    background-color: #0d4b89; 
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-around; 
+}
+
+#card {
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.50);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2.0px);
+    -webkit-backdrop-filter: blur(2.0px);
+    border: 1px solid rgba(255, 255, 255, 0.01);
+    width: 50vw;
+    height: 25vh;  
+    margin: auto;
+    display:flex;
+    /* grid-template-areas: 
+        'hive text text text'
+        'hive text text text'
+        'hive info info info'; */
+    /* gap: 5rem;   */
+}
+
+#hive {
+    /* transform: rotate(30deg); */
+    width: 30%; 
+    /* position: sticky relative; */
+    display: flex;
+    align-items: center; 
+}
+
+.hex {
+    margin: 0.5%; 
+    height: 43.25px; 
+    width: 50px; 
+    position:absolute;
+    top: 100px; 
+    left: 100px;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    background: #e0b754; 
+}
+
+#hex1 {
+    top: 50px; 
+   /*  animation-name: example;
+    animation-duration: 6s; 
+    animation-iteration-count: infinite; */
+    animation: example 6s linear infinite;
+}
+
+/* animation: name duration timingFunction delay iterationCount fillMode; */
+
+#hex2 {
+    top: 150px; 
+    /* animation-name: example;
+    animation-duration: 6s; 
+    animation-iteration-count: infinite; */
+    animation: example 6s linear infinite;
+    
+}
+
+#hex3 {
+    top: 75px; 
+    left: 55px;
+    /* animation-name: example;
+    animation-duration: 6s; 
+    animation-iteration-count: infinite;
+    animation-delay: 2s; */
+    animation: example 6s linear 2s infinite;
+}
+
+#hex4 {
+    top: 125px; 
+    left: 55px;
+    /* animation-name: example;
+    animation-duration: 6s; 
+    animation-iteration-count: infinite;
+    animation-delay: 1s; */
+    animation: example 6s linear 1s infinite;
+
+}
+
+#hex5 {
+    top: 75px; 
+    left: 144px;
+    /* animation-name: example;
+    animation-duration: 6s; 
+    animation-iteration-count: infinite;
+    animation-delay: 1s; */
+    animation: example 6s linear 1s infinite;
+
+}
+
+#hex6 {
+    top: 125px; 
+    left: 144px; 
+/*     animation-name: example;
+    animation-duration: 6s; 
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+ */    animation: example 6s linear 2s infinite;
+
+}
+
+.outer {
+    background: #ebd398;
+}
+
+.text {
+    color: #0d4b89; 
+    width: 70%; 
+}
+
+.name {
+    display:flex; 
+    flex-direction: column;
+    height: 100%; 
+    align-items: flex-start;
+    justify-content: center;
+    
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    background: rgba(255, 255, 255, 0.50);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2.0px);
+    -webkit-backdrop-filter: blur(2.0px);
+    border: 1px solid rgba(255, 255, 255, 0.01);
+    width: 50vw;
+    height: 25vh;
+    margin: auto; 
+}
+
+@keyframes example {
+    0%   {background-color: #ebd398;}
+    50%  {background-color: transparent;}
+    100%  {background-color: #ebd398;}
+  }
+
+/* .hex:before {
+    content: ' '; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-right: 25px solid teal; 
+    border-top: 43.75px solid transparent; 
+    border-bottom: 43.75px solid transparent;
+}
+
+.hex:after {
+    content: ' '; 
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-left: 25px solid teal; 
+    border-top: 43.75px solid transparent; 
+    border-bottom: 43.75px solid transparent; 
+}*/
